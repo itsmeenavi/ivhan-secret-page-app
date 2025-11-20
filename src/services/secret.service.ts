@@ -74,5 +74,25 @@ export const secretService = {
     if (error) throw error;
     return !!data;
   },
+
+  // Get friend's secret message by email
+  async getFriendSecretMessageByEmail(
+    currentUserId: string,
+    friendEmail: string
+  ): Promise<SecretMessage | null> {
+    // First, get the friend's user ID from their email
+    const { data: friendData, error: friendError } = await supabase
+      .from("profiles")
+      .select("id")
+      .eq("email", friendEmail)
+      .single();
+
+    if (friendError) {
+      throw new Error("User not found");
+    }
+
+    // Then fetch their secret message (with friendship check)
+    return this.getFriendSecretMessage(currentUserId, friendData.id);
+  },
 };
 

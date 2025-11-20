@@ -12,8 +12,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { LogOut, Trash2, Lock, Sparkles } from "lucide-react";
+import { LogOut, Trash2, Lock } from "lucide-react";
 import { toast } from "sonner";
+import { SecretView } from "@/components/secret-view";
 
 export default function SecretPage1() {
   const { user, loading, signOut, deleteAccount } = useAuth();
@@ -66,7 +67,7 @@ export default function SecretPage1() {
   }
 
   return (
-    <div className="min-h-[calc(100vh-73px)] bg-gradient-to-br from-emerald-50/30 via-white to-green-50/20 p-4 md:p-8">
+    <div className="min-h-[calc(100vh-73px)] bg-linear-to-br from-emerald-50/30 via-white to-green-50/20 p-4 md:p-8">
       <div className="container mx-auto max-w-3xl">
         <div className="space-y-6">
           <div className="text-center space-y-2">
@@ -90,24 +91,10 @@ export default function SecretPage1() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="rounded-xl bg-gradient-to-br from-emerald-50 to-green-50 p-8 border-2 border-emerald-200 shadow-inner">
-                <div className="flex items-start gap-3">
-                  <Sparkles className="h-6 w-6 text-[hsl(var(--color-primary))] shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-3 text-emerald-900">
-                      🎉 Congratulations!
-                    </h3>
-                    <p className="text-[hsl(var(--color-foreground))] leading-relaxed">
-                      You've successfully accessed Secret Page 1. This is a
-                      protected area only visible to authenticated users. The
-                      secret of the universe is...{" "}
-                      <span className="font-semibold text-[hsl(var(--color-primary))]">
-                        patience and persistence!
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <SecretView
+                title="🎉 Congratulations!"
+                message="You've successfully accessed Secret Page 1. This is a protected area only visible to authenticated users. The secret of the universe is... patience and persistence!"
+              />
             </CardContent>
             <CardFooter className="flex gap-2 flex-wrap">
               <Button onClick={handleSignOut} variant="outline">

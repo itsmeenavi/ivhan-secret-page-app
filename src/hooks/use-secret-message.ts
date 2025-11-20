@@ -35,9 +35,7 @@ export function useFriendSecretMessage(friendEmail: string) {
     queryKey: ["friend-secret", friendEmail],
     queryFn: async () => {
       if (!friendEmail) return null;
-      // For now using mock ID - you'd need to implement proper user lookup
-      const friendId = `mock-id-${friendEmail}`;
-      return secretService.getFriendSecretMessage(user?.id || "", friendId);
+      return secretService.getFriendSecretMessageByEmail(user?.id || "", friendEmail);
     },
     enabled: !!user?.id && !!friendEmail,
     retry: false,
