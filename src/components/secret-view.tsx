@@ -18,10 +18,10 @@ export function SecretView({
         className={`rounded-xl bg-linear-to-br from-emerald-50 to-green-50 p-8 border-2 border-emerald-200 shadow-inner ${className}`}
     >
       <div className="flex items-start gap-3">
-        <Sparkles className="h-6 w-6 text-[hsl(var(--color-primary))] shrink-0 mt-1" />
+        <Sparkles className="h-6 w-6 text-emerald-600 shrink-0 mt-1" />
         <div>
           <h3 className="text-xl font-bold mb-3 text-emerald-900">{title}</h3>
-          <p className="text-[hsl(var(--color-foreground))] leading-relaxed">
+          <p className="text-gray-900 leading-relaxed">
             {message}
           </p>
         </div>

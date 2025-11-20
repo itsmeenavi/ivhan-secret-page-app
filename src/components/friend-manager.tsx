@@ -24,7 +24,7 @@ interface FriendManagerProps {
 }
 
 export function FriendManager({
-  accentColor = "text-[hsl(var(--color-accent))]",
+  accentColor = "text-emerald-700",
   className = "",
 }: FriendManagerProps) {
   const { user } = useAuth();
@@ -158,7 +158,7 @@ export function FriendManager({
             Add Friend
           </Label>
         </div>
-        <p className="text-sm text-[hsl(var(--color-muted-foreground))]">
+        <p className="text-sm text-gray-600">
           Send a friend request by entering their email address.
         </p>
         <div className="flex gap-2">
@@ -202,12 +202,12 @@ export function FriendManager({
       {/* View Friend's Secret Message */}
       <div className="space-y-4">
         <div className="flex items-center gap-2">
-          <Eye className="h-5 w-5 text-[hsl(var(--color-secondary))]" />
+          <Eye className="h-5 w-5 text-emerald-600" />
           <Label htmlFor="view-friend-email" className="text-lg font-semibold">
             View Friend's Secret Message
           </Label>
         </div>
-        <p className="text-sm text-[hsl(var(--color-muted-foreground))]">
+        <p className="text-sm text-gray-600">
           Enter a friend's email to view their secret message. You must be
           friends to view their secret.
         </p>
@@ -251,7 +251,7 @@ export function FriendManager({
               <Lock className="h-5 w-5" />
               🔓 Friend's Secret
             </h3>
-            <p className="text-[hsl(var(--color-foreground))] leading-relaxed">
+            <p className="text-gray-900 leading-relaxed">
               {friendSecret}
             </p>
           </div>
@@ -259,7 +259,7 @@ export function FriendManager({
 
         {attemptedView && !friendSecretError && !friendSecret && (
             <div className="rounded-xl bg-linear-to-r from-gray-50 to-slate-50 p-6 border-2 border-gray-200">
-            <p className="text-[hsl(var(--color-muted-foreground))] text-center">
+            <p className="text-gray-600 text-center">
               Your friend hasn't set a secret message yet.
             </p>
           </div>

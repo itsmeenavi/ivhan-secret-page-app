@@ -15,8 +15,8 @@ interface SecretFormProps {
 }
 
 export function SecretForm({
-  labelColor = "text-[hsl(var(--color-secondary))]",
-  buttonColor = "bg-[hsl(var(--color-secondary))] hover:bg-[hsl(var(--color-secondary))]/90",
+  labelColor = "text-emerald-700",
+  buttonColor = "bg-emerald-600 hover:bg-emerald-700 text-white",
   className = "",
 }: SecretFormProps) {
   const { secretMessage, saveMessage, isSaving } = useSecretMessage();
@@ -48,7 +48,7 @@ export function SecretForm({
           Your Secret Message
         </Label>
       </div>
-      <p className="text-sm text-[hsl(var(--color-muted-foreground))]">
+      <p className="text-sm text-gray-600">
         Create or overwrite your personal secret message below. This will be
         saved securely.
       </p>
@@ -78,7 +78,7 @@ export function SecretForm({
             <Lock className="h-5 w-5" />
             💎 Your Saved Secret
           </h3>
-          <p className="text-[hsl(var(--color-foreground))] leading-relaxed">
+          <p className="text-gray-900 leading-relaxed">
             {secretMessage}
           </p>
         </div>

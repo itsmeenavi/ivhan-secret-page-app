@@ -71,10 +71,10 @@ export default function SecretPage1() {
       <div className="container mx-auto max-w-3xl">
         <div className="space-y-6">
           <div className="text-center space-y-2">
-            <h1 className="text-4xl font-bold text-[hsl(var(--color-primary))]">
+            <h1 className="text-4xl font-bold text-emerald-700">
               Secret Page 1
             </h1>
-            <p className="text-[hsl(var(--color-muted-foreground))]">
+            <p className="text-gray-600">
               Your first secret destination
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function SecretPage1() {
           <Card className="shadow-2xl border-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-2xl">
-                <Lock className="h-6 w-6 text-[hsl(var(--color-primary))]" />
+                <Lock className="h-6 w-6 text-emerald-600" />
                 Secret Message
               </CardTitle>
               <CardDescription className="text-base">

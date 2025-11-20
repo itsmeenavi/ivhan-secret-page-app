@@ -73,10 +73,10 @@ export default function SecretPage3() {
       <div className="container mx-auto max-w-4xl">
         <div className="space-y-6">
           <div className="text-center space-y-2">
-            <h1 className="text-4xl font-bold text-[hsl(var(--color-accent))]">
+            <h1 className="text-4xl font-bold text-emerald-700">
               Secret Page 3
             </h1>
-            <p className="text-[hsl(var(--color-muted-foreground))]">
+            <p className="text-gray-600">
               Connect with friends and share secrets
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function SecretPage3() {
           <Card className="shadow-2xl border-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-2xl">
-                <Lock className="h-6 w-6 text-[hsl(var(--color-accent))]" />
+                <Lock className="h-6 w-6 text-emerald-600" />
                 Secret Messages & Friends
               </CardTitle>
               <CardDescription className="text-base">
@@ -101,12 +101,12 @@ export default function SecretPage3() {
 
               {/* User's Secret Message Form - Inherited from Page 2 */}
               <SecretForm
-                labelColor="text-[hsl(var(--color-accent))]"
-                buttonColor="bg-[hsl(var(--color-accent))] hover:bg-[hsl(var(--color-accent))]/90"
+                labelColor="text-emerald-700"
+                buttonColor="bg-emerald-600 hover:bg-emerald-700 text-white"
               />
 
               {/* Friend Management & Viewing - New Feature for Page 3 */}
-              <FriendManager accentColor="text-[hsl(var(--color-accent))]" />
+              <FriendManager accentColor="text-emerald-700" />
             </CardContent>
             <CardFooter className="flex gap-2 flex-wrap">
               <Button onClick={handleSignOut} variant="outline">

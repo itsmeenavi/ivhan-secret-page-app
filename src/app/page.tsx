@@ -84,8 +84,8 @@ export default function Home() {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="flex flex-col items-center gap-3">
-          <Loader2 className="h-8 w-8 animate-spin text-[hsl(var(--color-primary))]" />
-          <p className="text-lg text-[hsl(var(--color-muted-foreground))]">
+          <Loader2 className="h-8 w-8 animate-spin text-emerald-600" />
+          <p className="text-lg text-gray-600">
             Loading...
           </p>
         </div>
@@ -98,14 +98,14 @@ export default function Home() {
       <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-emerald-50/30 via-white to-green-50/20 p-4">
         <Card className="w-full max-w-2xl shadow-2xl border-2">
           <CardHeader className="text-center space-y-3 pb-8">
-            <div className="mx-auto w-16 h-16 rounded-full bg-[hsl(var(--color-primary))] flex items-center justify-center shadow-lg">
+            <div className="mx-auto w-16 h-16 rounded-full bg-emerald-600 flex items-center justify-center shadow-lg">
               <Lock className="h-8 w-8 text-white" />
             </div>
-            <CardTitle className="text-4xl font-bold text-[hsl(var(--color-primary))]">
+            <CardTitle className="text-4xl font-bold text-emerald-700">
               Welcome Back!
             </CardTitle>
             <CardDescription className="text-base">
-              <span className="font-semibold text-[hsl(var(--color-foreground))]">
+              <span className="font-semibold text-gray-900">
                 {user.email}
               </span>
               <br />
@@ -116,7 +116,7 @@ export default function Home() {
             <div className="grid gap-3">
               <Link href="/secret-page-1">
                 <Button
-                  className="w-full h-16 text-lg font-semibold bg-[hsl(var(--color-primary))] hover:bg-[hsl(var(--color-primary))]/90 shadow-lg transition-all hover:scale-105"
+                  className="w-full h-16 text-lg font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg transition-all hover:scale-105"
                   size="lg"
                 >
                   <Lock className="h-5 w-5 mr-2" />
@@ -125,7 +125,7 @@ export default function Home() {
               </Link>
               <Link href="/secret-page-2">
                 <Button
-                  className="w-full h-16 text-lg font-semibold bg-[hsl(var(--color-secondary))] hover:bg-[hsl(var(--color-secondary))]/90 shadow-lg transition-all hover:scale-105"
+                  className="w-full h-16 text-lg font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg transition-all hover:scale-105"
                   size="lg"
                 >
                   <Lock className="h-5 w-5 mr-2" />
@@ -134,7 +134,7 @@ export default function Home() {
               </Link>
               <Link href="/secret-page-3">
                 <Button
-                  className="w-full h-16 text-lg font-semibold bg-[hsl(var(--color-accent))] hover:bg-[hsl(var(--color-accent))]/90 shadow-lg transition-all hover:scale-105"
+                  className="w-full h-16 text-lg font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg transition-all hover:scale-105"
                   size="lg"
                 >
                   <Lock className="h-5 w-5 mr-2" />
@@ -166,10 +166,10 @@ export default function Home() {
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-emerald-50/30 via-white to-green-50/20 p-4">
       <Card className="w-full max-w-md shadow-2xl border-2">
         <CardHeader className="space-y-3 text-center">
-          <div className="mx-auto w-16 h-16 rounded-full bg-[hsl(var(--color-primary))] flex items-center justify-center shadow-lg">
+          <div className="mx-auto w-16 h-16 rounded-full bg-emerald-600 flex items-center justify-center shadow-lg">
             <Lock className="h-8 w-8 text-white" />
           </div>
-          <CardTitle className="text-3xl font-bold text-[hsl(var(--color-primary))]">
+          <CardTitle className="text-3xl font-bold text-emerald-700">
             {isLogin ? "Welcome Back" : "Create Account"}
           </CardTitle>
           <CardDescription className="text-base">
@@ -185,7 +185,7 @@ export default function Home() {
                 Email Address
               </Label>
               <div className="relative">
-                <Mail className="absolute left-3 top-3 h-5 w-5 text-[hsl(var(--color-muted-foreground))]" />
+                <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <Input
                   id="email"
                   type="email"
@@ -203,7 +203,7 @@ export default function Home() {
                 Password
               </Label>
               <div className="relative">
-                <KeyRound className="absolute left-3 top-3 h-5 w-5 text-[hsl(var(--color-muted-foreground))]" />
+                <KeyRound className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <Input
                   id="password"
                   type="password"
@@ -217,7 +217,7 @@ export default function Home() {
                 />
               </div>
               {!isLogin && (
-                <p className="text-xs text-[hsl(var(--color-muted-foreground))]">
+                <p className="text-xs text-gray-500">
                   Must be at least 6 characters
                 </p>
               )}
@@ -226,7 +226,7 @@ export default function Home() {
           <CardFooter className="flex flex-col gap-4">
             <Button
               type="submit"
-              className="w-full h-12 text-base font-semibold bg-[hsl(var(--color-primary))] hover:bg-[hsl(var(--color-primary))]/90"
+              className="w-full h-12 text-base font-semibold bg-emerald-600 hover:bg-emerald-700 text-white"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
@@ -247,7 +247,7 @@ export default function Home() {
                   setEmail("");
                   setPassword("");
                 }}
-                className="text-[hsl(var(--color-primary))] font-semibold underline-offset-4 hover:underline"
+                className="text-emerald-600 font-semibold underline-offset-4 hover:underline"
                 disabled={isSubmitting}
               >
                 {isLogin ? "Sign Up" : "Sign In"}
