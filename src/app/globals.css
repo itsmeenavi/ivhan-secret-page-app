@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Sta Clara International Corporation */
+  --color-background: 0 0% 100%;
+  --color-foreground: 131 54% 20%;
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 131 54% 20%;
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 131 54% 20%;
+  --color-primary: 131 54% 31%;
+  --color-primary-foreground: 0 0% 100%;
+  --color-secondary: 136 27% 53%;
+  --color-secondary-foreground: 0 0% 100%;
+  --color-muted: 136 20% 95%;
+  --color-muted-foreground: 136 15% 45%;
+  --color-accent: 136 27% 53%;
+  --color-accent-foreground: 0 0% 100%;
+  --color-destructive: 0 84.2% 60.2%;
+  --color-destructive-foreground: 0 0% 100%;
+  --color-border: 136 20% 88%;
+  --color-input: 136 20% 88%;
+  --color-ring: 131 54% 31%;
+  
+  /* Border Radius - Modern */
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+}
+
+* {
+  border-color: hsl(var(--color-border));
+}
+
+body {
+  background: white;
+  color: hsl(var(--color-foreground));
+}
+
+/* Force light mode - override dark mode preferences */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: white;
+    color: hsl(var(--color-foreground));
+  }
+}
