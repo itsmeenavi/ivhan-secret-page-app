@@ -81,44 +81,6 @@ src/
 - ✅ View friends' secret messages
 - ✅ **401 error for non-friends**
 
-## 🛠️ Setup Instructions
-
-### 1. Install Dependencies
-
-```bash
-npm install
-```
-
-### 2. Set Up Supabase
-
-1. Create a Supabase project at [https://supabase.com](https://supabase.com)
-2. Create a `.env.local` file with your credentials:
-
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-```
-
-**Important**: The `SUPABASE_SERVICE_ROLE_KEY` is required for account deletion. Get it from:
-- Supabase Dashboard > Project Settings > API > `service_role` secret
-- ⚠️ **NEVER** commit this key to version control!
-
-### 3. Run Database Migrations
-
-Follow the SQL scripts in `SUPABASE_SETUP.md` to create:
-- `profiles` table
-- `secrets` table
-- `friend_requests` table
-- Row Level Security (RLS) policies
-
-### 4. Run Development Server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000)
 
 ## 🗄️ Database Schema
 
